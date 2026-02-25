@@ -70,8 +70,32 @@ h2 {
     }
 }
 
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    text-align: center;
+    /* Ensure internal text is centered */
+    width: 100%;
+}
+
 .section.active {
     opacity: 1;
+}
+
+.content {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Opening Section */
@@ -348,19 +372,42 @@ h2 {
 /* Responsive */
 @media (max-width: 768px) {
     #opening h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    #opening p {
+        font-size: 1.4rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .image-placeholder {
-        height: 250px;
+        height: 200px;
     }
 
-    .letter-container {
+    .letter-container,
+    .final-letter-container {
         padding: 1.5rem;
         width: 95%;
+        font-size: 1.1rem;
+    }
+
+    .glow-text {
+        font-size: 1.8rem;
+    }
+
+    .reveal-text {
+        font-size: 2.2rem;
+    }
+
+    .glowing-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .gif-container {
+        max-width: 85%;
     }
 }
