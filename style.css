@@ -26,16 +26,48 @@ h2 {
     font-family: 'Playfair Display', serif;
 }
 
-.section {
-    min-height: 100vh;
+.audio-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: 9999;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    position: relative;
+    cursor: pointer;
+    transition: opacity 1s ease, visibility 1s;
+}
+
+.audio-overlay.fade-out {
     opacity: 0;
-    transition: opacity 1.5s ease;
+    visibility: hidden;
+}
+
+.overlay-content {
+    text-align: center;
+    color: var(--rose-gold);
+}
+
+.heart-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+    animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 .section.active {

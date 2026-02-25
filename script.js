@@ -15,20 +15,22 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Audio Autoplay Workaround
+// Audio Autoplay Workaround using Overlay
 const music = document.getElementById('bg-music');
+const overlay = document.getElementById('audio-overlay');
+
 const startAudio = () => {
     music.play().then(() => {
-        // Remove listeners once audio starts
-        document.removeEventListener('click', startAudio);
-        document.removeEventListener('touchstart', startAudio);
-        document.removeEventListener('scroll', startAudio);
-    }).catch(e => console.log("Autoplay blocked, waiting for interaction"));
+        overlay.classList.add('fade-out');
+        // Start other animations after music starts
+        document.body.classList.add('reveal');
+    }).catch(e => {
+        console.log("Autoplay blocked, waiting for interaction");
+    });
 };
 
-document.addEventListener('click', startAudio);
-document.addEventListener('touchstart', startAudio);
-document.addEventListener('scroll', startAudio);
+overlay.addEventListener('click', startAudio);
+overlay.addEventListener('touchstart', startAudio);
 
 sections.forEach(section => {
     observer.observe(section);
