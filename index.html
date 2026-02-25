@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love | I Miss You</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <!-- Audio Element (hidden) -->
+    <audio id="bg-music" loop autoplay>
+        <source src="Aaradhike Video Song  Soubin Shahir  E4 Entertainment  Johnpaul George - E4 Entertainment.mp3"
+            type="audio/mpeg">
+    </audio>
+
+    <main>
+        <!-- Opening Screen -->
+        <section id="opening" class="section active">
+            <div class="content">
+                <h1 class="fade-in">Hey my love…</h1>
+                <p class="fade-in delay-1">I know you miss me.</p>
+                <p class="fade-in delay-2">But I’m always right here.</p>
+                <div class="floating-hearts"></div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll down to feel my hug</span>
+                <div class="arrow"></div>
+            </div>
+        </section>
+
+
+        <!-- GIF Section -->
+        <section id="gif-section" class="section">
+            <div class="content">
+                <div class="gif-container">
+                    <img src="cute-cat.gif" alt="Panda Hug" class="romantic-gif">
+                </div>
+                <p class="fade-in delay-1"
+                    style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; margin-top: 2rem;">
+                    A big hug for you...
+                </p>
+            </div>
+        </section>
+
+        <section id="heartbeat" class="section">
+            <div class="heartbeat-container">
+                <svg class="heartbeat-svg" viewBox="0 0 500 200">
+                    <path class="heartbeat-line"
+                        d="M0,100 L150,100 L160,80 L170,120 L180,40 L190,160 L200,80 L210,100 L350,100" />
+                </svg>
+                <h2 class="glow-text">Every beat says your name.</h2>
+            </div>
+        </section>
+
+        <!-- Message From Me Section -->
+        <section id="message" class="section">
+            <div class="letter-container">
+                <div id="typing-text" class="typing-animation"></div>
+            </div>
+        </section>
+
+        <!-- Final Screen -->
+        <section id="final" class="section">
+            <div id="final-button-container">
+                <button id="miss-me-btn" class="glowing-btn">💌 Click if you still miss me…</button>
+            </div>
+            <div id="final-reveal" class="hidden">
+                <h2 class="reveal-text">Then come here… let me hold you forever.</h2>
+                <div class="final-letter-container">
+                    <div id="final-typing-text" class="typing-animation"></div>
+                </div>
+                <div class="heart-explosion"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
